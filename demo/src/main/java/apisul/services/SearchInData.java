@@ -3,6 +3,12 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class SearchInData {
+  /**
+   * Método que encontra os elementos que menos se repetem em uma lista usando hashmap
+   * @param <T> parametro genérico para poder ser utilizado tanto pelos andares quanto pelos elevadores
+   * @param dataToSearch a lista contendo os elementos
+   * @return uma lista com os elementos que menos se repetem na lista do parametro dataToSearch
+   */
   public static <T> List<T> leastFrequent(List<T> dataToSearch) {
     Map<T, Integer> count = new HashMap<>();
     for (int i = 0; i < dataToSearch.size(); i++) {
@@ -25,6 +31,12 @@ public class SearchInData {
     return minItems;
   }
 
+  /**
+   * Método que encontra os elementos que mais se repetem em uma lista usando hashmap
+   * @param <T> parametro genérico para poder ser utilizado tanto pelos andares quanto pelos elevadores
+   * @param dataToSearch  a lista contendo os elementos
+   * @return uma lista com os elementos que menos se repetem na lista do parametro dataToSearch
+   */
   public static <T> List<T> mostFrequent(List<T> dataToSearch) {
     Map<T, Integer> count = new HashMap<>();
     for (int i = 0; i < dataToSearch.size(); i++) {
@@ -46,7 +58,12 @@ public class SearchInData {
     }
     return maxItems;
   }
-
+/**
+ * Método para retornar a porcetagem de um elevador em relação ao uso total
+ * @param elevator um character contendo o elevador
+ * @param pathToFile um caminho para o arquivo contendo os dados
+ * @return uma porcentagem com até duas casas decimais
+ */
   public static float usePercentageOfElevator(Character elevator, String pathToFile) {
     float useOfChosenElevator = (float) GetData.getShiftsByElevator(elevator, pathToFile).size();
     float totalElevatorUse = (float) GetData.getInfosOf("shifts", pathToFile).size();
