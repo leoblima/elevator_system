@@ -10,7 +10,11 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class JsonFileReader {
-
+/**
+ * Função que lê um arquivo JSON e cria um objeto manipulável em Java. 
+ * @param filePath um caminho para o arquivo que contém os dados JSON
+ * @return uma lista de objetos JSON que estavam no arquivo.
+ */
     public static List<JSONObject> readJsonFile(String filePath) {
         List<JSONObject> jsonObjects = new ArrayList<>();
         try {
