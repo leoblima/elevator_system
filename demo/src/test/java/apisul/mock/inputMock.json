@@ -1,0 +1,16 @@
+[
+ {
+     "andar": 11,
+     "elevador": "A",
+     "turno": "M"
+ },
+ {
+     "andar": 12,
+     "elevador": "A",
+     "turno": "M"
+ },{
+     "andar": 14,
+     "elevador": "A",
+     "turno": "M"
+ }
+]
