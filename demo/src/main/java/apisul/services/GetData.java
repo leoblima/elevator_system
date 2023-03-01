@@ -8,7 +8,7 @@ import java.util.List;
 
 public class GetData {
 /**
- * Função para obter um lista com todos os andares citados nas pesquisas
+ * Método para obter um lista com todos os andares citados nas pesquisas
  * @param pathToFile um caminho para o arquivo que contém os dados JSON
  * @return uma lista com todos os andares citados nas pesquisas
  */
@@ -24,7 +24,7 @@ public class GetData {
   }
 
 /**
- * Função para pegar as informações sobre os elevadores escolhidos ou sobre os turnos
+ * Método para pegar as informações sobre os elevadores escolhidos ou sobre os turnos
  * @param info ums string que pode conter dois valores: 'elevators' e 'shifts' tendo relação com o tipo de retorno
  * @param pathToFile um caminho para o arquivo que contém os dados em JSON
  * @return uma lista de caracteres contendo os turnos ou os elevadores citados na pesquisa
@@ -50,7 +50,7 @@ public class GetData {
   }
 
 /**
- * Função para pegar os turnos segundo um certo elevador
+ * Método para pegar os turnos segundo um certo elevador
  * @param elevator um caractere que representa um elevador 
  * @param pathToFile um caminho para o arquivo que contém os dados em JSON
  * @return uma lista de caracteres com os turnos citados na pesquisa segundo o elevador
@@ -72,7 +72,7 @@ public class GetData {
   }
 
 /**
- * Função que pega os andares não citados na pesquisa
+ * Método que pega os andares não citados na pesquisa
  * @param pathToFile um caminho para o arquivo que contém os dados em JSON
  * @param totalFloors quantidade total de andares no pŕedio
  * @return uma lista com os andares não utilizados
@@ -88,7 +88,7 @@ public class GetData {
     return nonUtilizedFloors;
   }
 /**
- * Função para pegar os elevadores não utilizados
+ * Método para pegar os elevadores não utilizados
  * @param info uma string para identificar o tipo de retorno, se vai retornar os elevadores não utilizados ou os turnos não mencionados
  * @param pathToFile um caminho para o arquivo que contém os dados em JSON
  * @param allData uma lista de caracteres contendo as possibilidades do prédio. No caso dos elevadores, todos os elevadores disponíveis no prédio.
@@ -105,7 +105,7 @@ public class GetData {
     return nonUtilized;
   }
 /**
- * Função para pegar os elevadores não utilizados
+ * Método para pegar os elevadores não utilizados
  * @param info uma string para identificar o tipo de retorno, se vai retornar os elevadores não utilizados ou os turnos não mencionados
  * @param pathToFile um caminho para o arquivo que contém os dados em JSON
  * @param allData uma lista de caracteres contendo as possibilidades do prédio. No caso dos elevadores, todos os elevadores disponíveis no prédio.
