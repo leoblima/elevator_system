@@ -16,7 +16,7 @@ public class ElevadorService implements IElevadorService {
     this._allElevators = allElevators;
     this._allShifts = allShifts;
   }
-  /** Deve retornar uma List contendo o(s) andar(es) menos utilizado(s). */
+  /** Retorna uma List contendo o(s) andar(es) menos utilizado(s). */
 	public List<Integer> andarMenosUtilizado() {
     List<Integer> floors = GetData.getFloors(this._pathToFile);
     List<Integer> nonUtilizedFloors = GetData.nonUtilizedFloors(this._pathToFile, this._totalFloors);
@@ -29,7 +29,7 @@ public class ElevadorService implements IElevadorService {
     return leastUtilizedFloors;
   }
 	
-	 /** Deve retornar uma List contendo o(s) elevador(es) mais frequentado(s). */
+	 /** Retorna uma List contendo o(s) elevador(es) mais frequentado(s). */
 	public List<Character> elevadorMaisFrequentado(){
     List<Character> elevators = GetData.getInfosOf("elevators", this._pathToFile);
     List<Character> mostUtilizedElevators = SearchInData.mostFrequent(elevators);
@@ -37,7 +37,7 @@ public class ElevadorService implements IElevadorService {
     return mostUtilizedElevators;
   };
 	
-	 /** Deve retornar uma List contendo o período de maior fluxo de cada um dos elevadores mais frequentados (se houver mais de um). */
+	 /** Retorna uma List contendo o período de maior fluxo de cada um dos elevadores mais frequentados (se houver mais de um). */
 	public List<Character> periodoMaiorFluxoElevadorMaisFrequentado() {
     List<Character> mostUtilizedPeriod = new ArrayList<Character>();
     List<Character> mostUtilizedElevators = this.elevadorMaisFrequentado();
@@ -51,7 +51,7 @@ public class ElevadorService implements IElevadorService {
     return mostUtilizedPeriod;
   };
 	
-	 /** Deve retornar uma List contendo o(s) elevador(es) menos frequentado(s). */
+	 /** Retorna uma List contendo o(s) elevador(es) menos frequentado(s). */
 	public List<Character> elevadorMenosFrequentado() {
     List<Character> elevators = GetData.getInfosOf("elevators", this._pathToFile);
     List<Character> nonUtilizedElevators = GetData.nonUtilized("elevators", this._pathToFile, this._allElevators);
@@ -65,7 +65,7 @@ public class ElevadorService implements IElevadorService {
     return leastUtilizedElevators;
   };
 	
-	 /** Deve retornar uma List contendo o período de menor fluxo de cada um dos elevadores menos frequentados (se houver mais de um). */
+	 /** Retorna uma List contendo o período de menor fluxo de cada um dos elevadores menos frequentados (se houver mais de um). */
 	public List<Character> periodoMenorFluxoElevadorMenosFrequentado() {
     List<Character> leastUtilizedPeriod = new ArrayList<Character>();
     List<Character> leastUtilizedElevators = this.elevadorMenosFrequentado();
@@ -84,7 +84,7 @@ public class ElevadorService implements IElevadorService {
     return leastUtilizedPeriod;
   };
 	
-	 /** Deve retornar uma List contendo o(s) periodo(s) de maior utilização do conjunto de elevadores. */
+	 /** Retorna uma List contendo o(s) periodo(s) de maior utilização do conjunto de elevadores. */
 	public List<Character> periodoMaiorUtilizacaoConjuntoElevadores() {
     List<Character> shifts = GetData.getInfosOf("shifts", this._pathToFile);
     List<Character> moreUtilizedPeriods = SearchInData.mostFrequent(shifts);
@@ -92,30 +92,30 @@ public class ElevadorService implements IElevadorService {
     return moreUtilizedPeriods;
   }
 
-  	/** Deve retornar um float (duas casas decimais) contendo o percentual de uso do elevador A em relação a todos os serviços prestados. */
+  	/** Retorna um float (duas casas decimais) contendo o percentual de uso do elevador A em relação a todos os serviços prestados. */
 	public float percentualDeUsoElevadorA() {
     return SearchInData.usePercentageOfElevator('A', this._pathToFile);
   };
 	
-	/** Deve retornar um float (duas casas decimais) contendo o percentual de uso do elevador B em relação a todos os serviços prestados. */
+	/** Retorna um float (duas casas decimais) contendo o percentual de uso do elevador B em relação a todos os serviços prestados. */
 	public float percentualDeUsoElevadorB() {
     return SearchInData.usePercentageOfElevator('B', this._pathToFile);
 
   };
 	
-	/** Deve retornar um float (duas casas decimais) contendo o percentual de uso do elevador C em relação a todos os serviços prestados. */
+	/** Retorna um float (duas casas decimais) contendo o percentual de uso do elevador C em relação a todos os serviços prestados. */
 	public float percentualDeUsoElevadorC() {
     return SearchInData.usePercentageOfElevator('C', this._pathToFile);
 
   };
 	
-	/** Deve retornar um float (duas casas decimais) contendo o percentual de uso do elevador D em relação a todos os serviços prestados. */
+	/** Retorna um float (duas casas decimais) contendo o percentual de uso do elevador D em relação a todos os serviços prestados. */
 	public float percentualDeUsoElevadorD() {
     return SearchInData.usePercentageOfElevator('D', this._pathToFile);
 
   };
 	
-	/** Deve retornar um float (duas casas decimais) contendo o percentual de uso do elevador E em relação a todos os serviços prestados. */
+	/** Retorna um float (duas casas decimais) contendo o percentual de uso do elevador E em relação a todos os serviços prestados. */
 	public float percentualDeUsoElevadorE() {
     return SearchInData.usePercentageOfElevator('E', this._pathToFile);
 
